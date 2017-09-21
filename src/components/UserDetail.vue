@@ -2,7 +2,7 @@
   <div class="component">
     <h3>You may view the User Details here</h3>
     <p>Many Details</p>
-    <p>name: {{name}}</p>
+    <p>name: {{ reverseName()}}</p>
   </div>
 </template>
 
@@ -12,7 +12,12 @@ export default {
     return {
     }
  },
- props: ['name']
+ props: ['name'],
+ methods: {
+  reverseName() {
+    return this.name.split("").reverse().join("")
+  }
+ }
 }
 </script>
 
