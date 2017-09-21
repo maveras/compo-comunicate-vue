@@ -8,11 +8,22 @@
 
 <script>
 export default {
-  data () {
+data () {
     return {
-    }
- },
- props: ['name'],
+  }
+},
+props: {
+  name: {
+    // type: Object,
+    // default: function () {
+    //   return {
+    //     name: 'Susan'
+    //   }
+    // }
+    type: String
+  }
+  
+},
  methods: {
   reverseName() {
     return this.name.split("").reverse().join("")
